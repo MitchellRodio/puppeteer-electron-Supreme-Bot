@@ -1,0 +1,264 @@
+header {
+
+  #logo {
+    -webkit-app-region: drag;
+    color: #393939
+
+
+  }
+
+
+
+}
+
+.navProfile {
+  position:absolute;
+  TOP:172px;
+  LEFT:61px;
+  width: 51px;
+  height: 14px;
+  color: #1db70d;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.browser {
+  
+	box-shadow: 3px 4px 3px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.browser:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.browser:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+.navSites {
+  position:absolute;
+  TOP:213px;
+  LEFT:61px;
+  width: 51px;
+  height: 14px;
+  color: #1db70d;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.navHelp {
+  position:absolute;
+  TOP:261px;
+  LEFT:61px;
+  width: 51px;
+  height: 14px;
+  color: #1db70d;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+
+
+
+.myButton {
+  position:absolute;
+  top: 600px;
+  lEFT:1100px;
+	background-color:#ffffff;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#1eb70d;
+	font-family:Arial;
+	font-size:14px;
+	padding:16px 45px;
+  text-decoration:none;
+}
+
+
+
+.box{
+  position:absolute;
+	width:1000px;
+  height:680px;
+  left: 260px;
+  top: 22px;
+}
+
+.grey{
+  position:absolute;
+  background: #393939;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
+
+body {
+  padding: 60px 0;
+  background-color: black;
+  margin: 0 auto;
+  width: 600px;
+}
+.body-text {
+  padding: 0 20px 30px 20px;
+  font-family: "Roboto";
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+  line-height: 1.2em;
+}
+.form-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-wrapper {
+  background-color: #18ab29;
+  width: 100%;
+  display: flex;
+
+}
+.personal-information {
+  background-color: #18ab29;
+  color: #fff;
+  padding: 1px 0;
+  text-align: center;
+}
+h1 {
+  font-size: 1.3em;
+  font-family: "Roboto"
+}
+input {
+  margin: 1px 0;
+  padding-left: 3%;
+  font-size: 14px;
+}
+input[type="text"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+input[type="email"]{
+  display: block;
+  height: 50px;
+  width: 97%;
+  border: none;
+}
+input[type="submit"]{
+  display: block;
+  height: 60px;
+  width: 100%;
+  border: none;
+  background-color: #18ab29;
+  color: #fff;
+  margin-top: 2px;
+  curson: pointer;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+input[type="submit"]:hover{
+  background-color: #18ab29;
+  transition: 0.3s ease;
+}
+#fname {
+  width: 46.8%;
+  float: left;
+  margin-bottom: 2px;
+}
+#expire {
+  width: 46.8%;
+  float: left;
+  margin-bottom: 2px;
+}
+#city {
+  width: 46.8%;
+  float: left;
+  margin-bottom: 2px;
+}
+#lname {
+  width: 46.8%;
+  float: right;
+}
+#cvc {
+  width: 46.8%;
+  float: right;
+}
+#zipcode {
+  width: 46.8%;
+  float: right;
+}
+
+@media only screen and (max-width: 480px){
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-container {
+    margin: 0 2%;
+  }
+  input {
+    font-size: 1em;
+  }
+  #save {
+    width: 100%;
+  }
+  #card {
+    width: 96.5%;
+  }
+  #email {
+    width: 96.5%;
+  }
+  #adress {
+    width: 96.5%;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  input {
+    margin: 2px 0;
+  }
+  input[type="submit"]{
+    height: 50px;
+  }
+
+      font-family: "Roboto";
+    }
+
+
+
+
+
+  }
+
+
+
+}
