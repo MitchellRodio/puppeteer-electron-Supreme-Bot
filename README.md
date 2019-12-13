@@ -1,6 +1,6 @@
 # Cyber.io
 
-Supreme Autofill to beat the humans, except not $3500
+Supreme Autofill to beat the humans, except not [$4000](https://botbroker.io/bots/cyber-aio).
 
 ## Installation
 
