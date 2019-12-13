@@ -1,84 +1,79 @@
-// console.log("Hello World");
-//
-//
-//
-// // Card Number Info
-// document.getElementById("save").addEventListener("click", function() {
-//     var card_info = {
-//       firstName: document.getElementById('fname').value,
-//       lastName: document.getElementById('lname').value,
-//       number: document.getElementById('card').value,
-//       expiry: document.getElementById('expire').value,
-//       cvc: document.getElementById('cvc').value,
-//     };
-//
-//     console.log(card_info);
-//      });
-//
-// // Adress Info
-// document.getElementById("save").addEventListener("click", function() {
-//       var order_info = {
-//         adress: document.getElementById('adress').value,
-//         city: document.getElementById('city').value,
-//         zipcode: document.getElementById('zipcode').value,
-//         email: document.getElementById('email').value,
-//       };
-//
-//      console.log(order_info);
-//       });
 
-// Supreme autofill
-
-var order_info = {name: "your name", // your first and last name
-                  email: "your@email.com", // your email
-                  phone: "5555555555", // your phone number
-                  address1: "123 cook lane", // your street address
-                  address2: "apartment 1", // leave blank if you dont have one
-                  zipcode: "00000", // your zip code
-                  city: "New York", // city
-                  state_code: "NY", // state code, if you dont know this then look it up son
-                  country: "USA" // only two options, "USA" or "CANADA"
-                 };
-var card_info = {cc_number: "xxx", // your full credit card number
-                 cc_cvv: "xxx", // the 3 digit security code
-                 cc_month: "04", // month of expiration, if it is 1-9 use 01, 02, 03...
-                 cc_year: "2019" // year of expiration
-                };
+const puppeteer = require('puppeteer');
+// const info = require("./config"); (RESORT TO .config FILE if document.getelementbyID doesn't work.)
 
 
 
 
-// supremenewyork find page elements and autofill
 
-var auto_process = false; // set this to true if you want the checkout to automatically click the process payment button
 
-(function() {
-    'use strict';
 
-    // checkout automation
-    if (document.location == "https://www.supremenewyork.com/checkout") {
-        // billing/shipping information
-        document.getElementsByName("order[billing_name]")[0].value = order_info.name;
-        document.getElementsByName("order[email]")[0].value = order_info.email;
-        document.getElementsByName("order[tel]")[0].value = order_info.phone;
-        document.getElementsByName("order[billing_address]")[0].value = order_info.address;
-        document.getElementsByName("order[billing_zip]")[0].value = order_info.zipcode;
-        document.getElementsByName("order[billing_city]")[0].value = order_info.city;
+// Billing / Order Info (Change all)
 
-        // credit card information
-        document.getElementsByName("credit_card[cnb]")[0].value = card_info.card;
-        document.getElementsByName("credit_card[vval]")[0].value = card_info.cvc;
-        document.getElementsByName("credit_card[month]")[0].value = card_info.expire;
+var info = {
+    name:"Test Name",
+    email:"Test@gmail.com",
+    phone:"1234567890",
+    adress:"1929 Tactor Patch Road",
+    zip:"60607",
+    number:"1234123412341234",
+    cvc:"123"
+}
 
-        // accept terms
-        $('div.icheckbox_minimal').iCheck('check');
+module.exports - info;
 
-        // complete
-        if (auto_process)
-            document.getElementsByClassName("button checkout")[0].click();
-    }
 
-    // shop redirect
-    if (document.location == "http://www.supremenewyork.com/shop")
-        document.location = "http://www.supremenewyork.com/shop/all";
+
+
+(async () => {
+
+
+// {headless: false} to see behind the scenes
+
+  const browser = await puppeteer.launch({headless: false});
+  const page = await browser.newPage();
+  // Product Page
+  await page.goto('https://www.supremenewyork.com/shop/t-shirts/dk2lr39hm');
+  document.getElementById("loadedsite").innerHTML = "Site Loaded!";
+  console.log("Went to Page Successful")
+  await page.click("#add-remove-buttons > a");
+  document.getElementById("carted").innerHTML = "Added Item to Cart";
+  console.log("Added to cart,")
+  await page.waitFor(100);
+  await page.click("#add-remove-buttons > a");
+  document.getElementById("checkoutpage").innerHTML = "At Checkout Page";
+  console.log("Entered Billing Page")
+//   Interval (MS)
+  await page.waitFor(200);
+  document.getElementById("waitintv").innerHTML = "Waiting for Interval";
+  await page.type("#order_billing_name",info.name)
+  await page.type("#order_email",info.email)
+  await page.type("#order_tel",info.phone)
+  await page.type("#bo",info.adress);
+  await page.type("#order_billing_zip",info.zip);
+  document.getElementById("orderinputed").innerHTML = "Order Info Inputed";
+  console.log("Order Info Inputed")
+  await page.type("#rnsnckrn",info.number)
+  await page.type("#orcer",info.cvc)
+  await page.type("#credit_card_month","04")
+  await page.type("#credit_card_year","2026")
+  document.getElementById("billinginputed").innerHTML = "Billing Info Inputed";
+  console.log("Billing Info Inputed")
+  
+
+// Add Submit Order
+document.getElementById("cooked").innerHTML = "COOKED - Order Successfully Submited";
+// Close browser if Headless is False
+await browser.close();
+
+console.log("Order Submitted. Success!!! Now closing")
+
 })();
+
+
+
+
+  // function script {
+
+  // }
+// document.getElementById(‘mylink’).addEventListener(‘click’, () => { function script });

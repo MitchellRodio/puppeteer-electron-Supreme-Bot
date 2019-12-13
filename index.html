@@ -2,7 +2,8 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <img style="position:absolute; TOP:25px; LEFT:60px; WIDTH:50px; HEIGHT:50px" SRC="https://i.imgur.com/wwsbmi6.png" id="logo">
+    <img style="position:absolute; TOP:25px; LEFT:60px; WIDTH:50px; HEIGHT:50px" SRC="https://i.imgur.com/A9fprAv.png" id="logo">
+    <!-- https://i.imgur.com/wwsbmi6.png -->
 
     <title>Cyber.io</title>
   </head>
@@ -33,7 +34,7 @@
 
           <div class="card-wrapper"></div>
 
-          <input id="adress" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address"/>
+          <input id="adress" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Street Address"/>
               <input id="city" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
               <input id="zipcode" maxlength="7" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
               <input id="email" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/>
@@ -42,49 +43,57 @@
 <br>
 <br>
 
-              <center><a href="#" script"" class="browser">Browser</a></center>
-
-
-
-
-
-
-
-
-
-
+              <center><a href="#"  onclick="bot" class="start">Start</a></center>
 
       </div>
 
-      
+<!-- Changed to "new text" from script.js! (TEST FOR BUILT IN CONSOLE) -->
+
+
+<!-- Built In Console -->
+  <div class="console grey">
+    <h1 class="console-text">Console</h1>
+    <p class="consoleText" id="loadedsite"></p>
+    <p class="consoleText"  id="carted"></p>
+    <p class="consoleText"  id="checkoutpage"></p>
+    <p class="consoleText"  id="waitintv"></p>
+    <p class="consoleText"  id="orderinputed"></p>
+    <p class="consoleText"  id="billinginputed"></p>
+    <p class="consoleText"  id="cooked"></p>
+
+
+
+  </div>
 
 
 
 
 
-<!-- Local Storage -->
 
 
-// Put in .js
-//
-// var order_info = {name: "your name", // your first and last name
-//                   email: "your@email.com", // your email
-//                   phone: "5555555555", // your phone number
-//                   address1: "123 cook lane", // your street asdress
-//                   address2: "apartment 1", // leave blank if you dont have one
-//                   zip_code: "00000", // your zip code
-//                   city: "New York", // city
-//                   state_code: "NY", // state code, if you dont know this then look it up son
-//                   country: "USA" // only two options, "USA" or "CANADA"
-//                  };
 
-
-console.log(lastname);
 </script>
 
-      <a href=""><h2 class="navProfile">Profiles</h2></a>
+      <!-- <a href=""><h2 class="navProfile">Profile</h2></a>
       <a href="https://www.supremenewyork.com/checkout"><h2 class="navSites">Sites</h2></a>
-      <a href="https://kith.com/checkout"><h2 class="navHelp">Help</h2></a>
+      <a href="script.js"><h2 id="mylink" class="navHelp">Guide</h2></a> -->
+
+      <!-- <script type="text/javascript">
+
+        var myLink = document.getElementById('mylink');
+        
+        myLink.onclick = function(){
+        
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "script.js."; 
+            document.getElementsByTagName("head")[0].appendChild(script);
+            return false;
+        
+        }
+        
+        
+        </script> -->
 
 
 
@@ -100,8 +109,8 @@ console.log(lastname);
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
+    <!-- <script src="java.js"></script> -->
 
   </body>
 </html>

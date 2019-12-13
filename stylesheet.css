@@ -25,8 +25,8 @@ header {
   text-transform: uppercase;
 }
 
-.browser {
-  
+.start {
+
 	box-shadow: 3px 4px 3px 0px #8a2a21;
 	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
 	background-color:#c62d1f;
@@ -101,7 +101,7 @@ header {
   text-decoration:none;
 }
 
-
+/* Div */
 
 .box{
   position:absolute;
@@ -114,6 +114,23 @@ header {
 .grey{
   position:absolute;
   background: #393939;
+}
+
+.console{
+  position:absolute;
+  border-radius: 25px;
+	width:230px;
+  height:400px;
+  left: 10px;
+  top: 100px;
+}
+
+.consoleText {
+  border-radius: 25px;
+  color: #1db70d;
+  font-family: Arial;
+  font-weight: 700;
+  text-align: center;
 }
 
 
@@ -132,6 +149,17 @@ body {
   color: #333;
   text-align: center;
   line-height: 1.2em;
+
+}
+.console-text {
+  padding: 0 20px 30px 20px;
+  font-family: "Arial";
+  font-size: 1em;
+  color: black;
+  text-shadow: 2px 2px #2C3E50;
+  text-align: center;
+  line-height: 1.2em;
+
 }
 .form-container {
   flex-direction: column;
