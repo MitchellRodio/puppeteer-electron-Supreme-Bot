@@ -30,4 +30,4 @@ The default test profile is set in script.js on line 13-21. Entering a profile m
 Go to script.js line 33 and change ``false`` to ``true``
 
 
-![alt text](https://i.imgur.com/q4WFTbQ.png)
+![Cyber.io UI](https://i.imgur.com/q4WFTbQ.png)
