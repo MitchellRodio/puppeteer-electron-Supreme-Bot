@@ -19,7 +19,12 @@ To start, type in gitbash
 npm run watch
 ```
 
+
+
 (Runs in developer mode)
 
 
 The default test profile is set in script.js on line 13-21. Entering a profile manually would require entering it every time you test. 
+
+# Run Headless
+Go to script.js line 33 and change ``false`` to ``true``
